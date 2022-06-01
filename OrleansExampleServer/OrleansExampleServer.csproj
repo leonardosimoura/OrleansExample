@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator" Version="4.0.0-preview1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="4.0.0-preview1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core" Version="4.0.0-preview1" />
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="4.0.0-preview1" />
+    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="4.0.0-preview1" />
+    <PackageReference Include="Microsoft.Orleans.Runtime.Abstractions" Version="4.0.0-preview1" />
+    <PackageReference Include="Microsoft.Orleans.Sdk" Version="4.0.0-preview1" />
+    <PackageReference Include="Microsoft.Orleans.Server" Version="4.0.0-preview1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrleansExampleGrainsInterfaces\OrleansExampleGrainsInterfaces.csproj" />
+    <ProjectReference Include="..\OrleansExampleGrains\OrleansExampleGrains.csproj" />
+  </ItemGroup>
+
+</Project>
