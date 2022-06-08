@@ -1,4 +1,6 @@
-﻿using Orleans;
+﻿using Microsoft.Extensions.Logging;
+using Orleans;
+using Orleans.Placement;
 using Orleans.Runtime;
 using OrleansExampleGrainsInterfaces;
 using System;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OrleansExampleGrains
 {
-    public class DeviceGrain : Grain, IDeviceGrain, IRemindable
+    public class DeviceGrain : Grain, IDeviceGrain
     {
         const string LIGHT_OFF_REMINDER = "Reminder_Lights_Off";
         private DeviceInfo _deviceInfo;

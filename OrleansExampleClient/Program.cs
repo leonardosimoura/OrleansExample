@@ -32,7 +32,7 @@ app.MapGet("/setup", async (IGrainFactory grainFactory) =>
     {
         var deviceId = execution.ToString();
         var device = grainFactory.GetGrain<IDeviceGrain>(deviceId);
-        var deviceInfo = new DeviceInfo($"Device - {deviceId}", new List<ILightGrain>());
+        var deviceInfo = new DeviceInfo($"Device - {deviceId}");
         await device.SetInfo(deviceInfo);
 
     });
@@ -68,4 +68,6 @@ app.MapGet("/turn-on", async (IGrainFactory grainFactory) =>
     return true;
 })
 .WithName("TurnOn");
+
+
 app.Run();

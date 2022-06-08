@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OrleansExampleGrainsInterfaces
 {
-    public interface IDeviceGrain : IGrainWithStringKey
+    public interface IDeviceGrain : IGrainWithStringKey, IRemindable
     {
 
         Task<string> Name();

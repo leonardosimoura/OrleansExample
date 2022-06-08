@@ -4,6 +4,7 @@ using Orleans.Hosting;
 using Orleans.Runtime;
 using OrleansExampleGrains;
 using OrleansExampleGrainsInterfaces;
+using System.Dynamic;
 
 ;
 
@@ -81,6 +82,7 @@ app.MapGet("/device/{deviceId}", async (string deviceId, IGrainFactory grainFact
     return await device.InfoDetail();
 })
 .WithName("Device");
+
 
 app.MapGet("/turn-light-on/{from}/{to}", async (int from, int to,IGrainFactory grainFactory) =>
 {
